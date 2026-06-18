@@ -461,7 +461,7 @@
   </main>
 
 <script>
-var ENDPOINT = "";
+var ENDPOINT = "https://script.google.com/macros/s/AKfycbxVDa796v7Qa7zSI6nM3KKM0IH-VWoWjqAjrszh8som-oi02N0Tnqo7hGxzvKt2ImWEeg/exec";
 var SCALE = ["Excellent","Good","Acceptable","Fair","Poor"];
 var DEVICE_ROWS = [
   ["dp_setup","Ease of setup"],
@@ -540,7 +540,7 @@ form.addEventListener('submit', function(e){
     setTimeout(done, 500);
     return;
   }
-  fetch(ENDPOINT, { method:'POST', body: JSON.stringify(data) })
+  fetch(ENDPOINT, { method:'POST', mode:'no-cors', body: JSON.stringify(data) })
     .then(function(){ done(); })
     .catch(function(err){
       console.error(err);
